@@ -1,5 +1,5 @@
 #coldTwit
-import twitter
+import tweepy
 
 #CHANGE TO 'config.dat'
 #USING LOCAL COPY WITH SENSITIVE INFO
@@ -23,10 +23,15 @@ def connect():
 	consumer_secret=parray[1]
 	access_token_key=parray[2]
 	access_token_secret=parray[3]
-	api = twitter.Api(consumer_key,consumer_secret,access_token_key,access_token_secret)
+	auth1 = tweepy.auth.OAuthHandler(consumer_key,consumer_secret)
+	auth1.set_access_token(access_token_key,access_token_secret)
+	api = tweepy.API(auth1)
 	return api
 
 
 if __name__ == '__main__':
     api = connect()
-	print api.VerifyCredentials()
+    user = 'narendramodi'
+    timeline = api.user_timeline(screen_name=user, include_rts=True, count=100)
+    for tweet in timeline:
+    	print tweet.text

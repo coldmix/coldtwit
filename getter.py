@@ -1,9 +1,13 @@
 #coldTwit
 import twitter
 
+#CHANGE TO 'config.dat'
+#USING LOCAL COPY WITH SENSITIVE INFO
+config_path = 'config2.dat'
+
 #parsing configuration details from config.dat
 def parseConfigs():	
-	reader = open('config.dat')
+	reader = open(config_path)
 	myarray = []
 	for i in range(0,4):
 		ele = reader.readline()

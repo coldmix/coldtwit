@@ -16,6 +16,8 @@ Try to use this data to analyse sentiment and other aspects of the upcoming 2014
 * search users timeline
 * dump data to file using custom xml
 
+---
+
 ### To Do: ###
 
 * document steps to connect and setup api

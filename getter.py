@@ -31,7 +31,4 @@ def connect():
 
 if __name__ == '__main__':
     api = connect()
-    user = 'narendramodi'
-    timeline = api.user_timeline(screen_name=user, include_rts=True, count=100)
-    for tweet in timeline:
-    	print tweet.text
+

@@ -1,2 +1,4 @@
 config2.dat
 .DS_STORE
+*.tweets
+*.pyc
